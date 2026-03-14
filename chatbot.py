@@ -1,7 +1,9 @@
 import streamlit as st
 from llm_wrapper.gemini import gemini
+from llm_wrapper.localLLM.localLLM import LocalChatbot 
 
-genai = gemini.GeminiChatbot()
+# genai = gemini.GeminiChatbot()
+genai = LocalChatbot()
 
 def main_page():
     _, center, _ = st.columns([4,10,4])
